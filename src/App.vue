@@ -1,33 +1,46 @@
 <template>
   <div id="app">
-    <img src="http://vuejs.org/images/logo.png">
+    <img src="coffe_mug.jpg">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vueify" target="_blank">vueify</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+      <div id="click">
+      <h2>Que voulez-vous faire?</h2>
+
+        <button  v-on:click="onMachinesListClick">Consulter la liste des machines</button>
+        <button  v-on:click="onMapClick">Voir la carte</button>
+
+      </div>
+      <ul>
+
+          <MachinesList>
+
+          </MachinesList>
+
+          <MachinesMap>
+
+          </MachinesMap>
+      </ul>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to First Coffee Machine'
     }
-  }
-}
+  },
+    methods: {
+        onMachinesListClick: function () {
+            window.alert('liste machines');
+
+        },
+        onMapClick: function () {
+            window.alert('liste map');
+    }
+},
+};
 </script>
 
 <style scoped>
@@ -38,6 +51,19 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+button {
+    background-color: #947b6c;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 200px;
+    cursor: pointer;
+
 }
 
 img {
