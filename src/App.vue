@@ -4,21 +4,28 @@
     <h1>{{ msg }}</h1>
       <div id="click">
       <h2>Que voulez-vous faire?</h2>
-
+        <!--boutons avec alertes
         <button  v-on:click="onMachinesListClick">Consulter la liste des machines</button>
-        <button  v-on:click="onMapClick">Voir la carte</button>
+        <button  v-on:click="onMapClick">Voir la carte</button>-->
+
 
       </div>
+
       <ul>
+          <!--appel composant simples
+          <MachinesList></MachinesList>
+           <MachinesMap></MachinesMap>-->
+          <router-link to="/Machines"><button> Consulter la liste des machines</button></router-link>
+          <router-link to="/Map"><button> Voir la carte</button></router-link>
+          <router-link to="/Machine"><button> Machine</button></router-link>
 
-          <MachinesList>
+          <!--appel composant fichiers
+          </Liste></Liste>
+          <Carte></Carte>-->
 
-          </MachinesList>
 
-          <MachinesMap>
-
-          </MachinesMap>
       </ul>
+     <router-view></router-view>
   </div>
 </template>
 
