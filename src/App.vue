@@ -17,7 +17,7 @@
            <MachinesMap></MachinesMap>-->
           <router-link to="/Machines"><button> Consulter la liste des machines</button></router-link>
           <router-link to="/Map"><button> Voir la carte</button></router-link>
-          <router-link to="/Machine"><button> Machine</button></router-link>
+          <!--<router-link to="/Machine"><button> Machine</button></router-link>-->
 
           <!--appel composant fichiers
           </Liste></Liste>
