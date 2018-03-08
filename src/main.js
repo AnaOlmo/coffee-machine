@@ -6,9 +6,19 @@ import Machine from './Machine.vue'
 import VueRouter from 'vue-router'
 //import Router from 'vue-router'
 import ToggleButton from 'vue-js-toggle-button'
+import * as VueGoogleMaps from 'vue2-google-maps'
 Vue.use(ToggleButton);
 Vue.use(VueRouter);
 //Vue.use(Router);
+Vue.use(VueGoogleMaps, {
+    load: {
+        key: 'AIzaSyAZhd4u8n6NlTeeEG6bjabrQlkwTkmrvhY',
+        //libraries: 'places', // This is required if you use the Autocomplete plugin
+        // OR: libraries: 'places,drawing'
+        // OR: libraries: 'places,drawing,visualization'
+        // (as you require)
+    }
+});
 
 //composant provenant de fichiers//
 Vue.component('Liste',List);

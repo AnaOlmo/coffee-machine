@@ -1,12 +1,20 @@
 <template>
     <div>
         <h1>{{ msg}}</h1>
+        <!--<gmap-map-->
+                <!--:center="{lat:10, lng:10}"-->
+                <!--:zoom="7"-->
+                <!--:class="google-map"-->
+        <!--&gt;-->
+        <!--</gmap-map>-->
     </div>
 </template>
 
 
 <script>
-    export default {
+
+
+   export default {
         name: 'Map',
         data() {
             return {
@@ -17,6 +25,10 @@
 
 </script>
 
-<style>
+<style scoped>
+    .google-map {
+        width: 800px;
+        height: 600px;
 
+    }
 </style>
