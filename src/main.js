@@ -7,9 +7,11 @@ import VueRouter from 'vue-router'
 //import Router from 'vue-router'
 import ToggleButton from 'vue-js-toggle-button'
 import * as VueGoogleMaps from 'vue2-google-maps'
+//import axios from 'axios'
 Vue.use(ToggleButton);
 Vue.use(VueRouter);
 //Vue.use(Router);
+
 Vue.use(VueGoogleMaps, {
     load: {
         key: 'AIzaSyAZhd4u8n6NlTeeEG6bjabrQlkwTkmrvhY',
